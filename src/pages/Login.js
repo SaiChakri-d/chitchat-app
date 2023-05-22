@@ -1,4 +1,3 @@
-
 import * as React from "react";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -15,9 +14,9 @@ import axios from "axios";
 import { loginRoute } from "../utils/APIRoutes";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
-import { IconButton, InputAdornment,  } from "@mui/material";
+import { IconButton, InputAdornment } from "@mui/material";
 import logo from "../assets/logo.png";
-
+import Spinner from "../components/Spinner";
 
 const theme = createTheme();
 
@@ -32,11 +31,11 @@ export default function Login() {
     draggable: true,
     theme: "light",
   };
-    React.useEffect(() => {
-      if (localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)) {
-        navigate("/");
-      }
-    }, []);
+  React.useEffect(() => {
+    if (localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)) {
+      navigate("/");
+    }
+  }, []);
 
   const handleChange = (event) => {
     setValues({ ...values, [event.target.name]: event.target.value });
@@ -72,7 +71,6 @@ export default function Login() {
           process.env.REACT_APP_LOCALHOST_KEY,
           JSON.stringify(data.user)
         );
-
         navigate("/");
       }
     }
@@ -103,7 +101,7 @@ export default function Login() {
             <img
               style={{
                 height: "8rem",
-                margin: "2rem"
+                margin: "2rem",
               }}
               src={logo}
               alt="logo"
@@ -190,6 +188,7 @@ export default function Login() {
             >
               Sign In
             </Button>
+
             <Grid
               container
               style={{
@@ -214,7 +213,6 @@ export default function Login() {
           </Box>
         </Box>
       </Container>
-
       <ToastContainer />
     </ThemeProvider>
   );

@@ -227,7 +227,7 @@ export default function Register() {
               
               required
               sx={{
-                mt: 1,
+                mt: 2,
                 mb: 2,
                 "&:hover": {
                   backgroundColor: "#4b0dba",

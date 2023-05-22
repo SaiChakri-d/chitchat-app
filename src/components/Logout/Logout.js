@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { BiPowerOff } from "react-icons/bi";
+import { FiLogOut } from "react-icons/fi"
 
 import axios from "axios";
 import { Button } from "./logoutElements";
@@ -19,7 +19,8 @@ export default function Logout() {
   };
   return (
     <Button onClick={handleClick}>
-      <BiPowerOff />
+      <span style={{ margin: "0.25rem", color: "white"}}>Logout</span>
+      <FiLogOut />
     </Button>
   );
 }
