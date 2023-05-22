@@ -20,13 +20,14 @@ export default function Welcome() {
         justifyContent: "center",
         alignItems: "center",
         color: "black",
-        background: "white",
+        background: "ivory",
         flexDirection: "column",
       }}
     >
       <img
         style={{
           height: "20rem",
+          margin: "2rem",
         }}
         src={Robot}
         alt=""

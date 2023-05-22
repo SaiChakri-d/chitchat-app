@@ -122,6 +122,7 @@ export default function Register() {
             <img
               style={{
                 height: "8rem",
+                margin: "2rem"
               }}
               src={logo}
               alt="logo"

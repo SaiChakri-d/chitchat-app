@@ -6,8 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 import { Container } from "./setavatarElements";
 import { setAvatarRoute } from "../../utils/APIRoutes";
-
-
+import Spinner from "../Spinner";
 
 export default function SetAvatar() {
   const api = `https://api.multiavatar.com/4645646`;
@@ -70,7 +69,8 @@ export default function SetAvatar() {
     <>
       {isLoading ? (
         <Container>
-          <h1 className="loading">Loading...</h1>
+          {/* <h1 className="loading">Loading...</h1> */}
+          <Spinner />
         </Container>
       ) : (
         <Container>
@@ -85,7 +85,6 @@ export default function SetAvatar() {
                     selectedAvatar === index ? "selected" : ""
                   }`}
                 >
-                   
                   <img
                     src={`data:image/svg+xml;base64,${avatar}`}
                     alt="avatar"
@@ -93,7 +92,6 @@ export default function SetAvatar() {
                     onClick={() => setSelectedAvatar(index)}
                   />
                 </div>
-               
               );
             })}
           </div>
@@ -102,11 +100,7 @@ export default function SetAvatar() {
           </button>
           <ToastContainer />
         </Container>
-        )} 
+      )}
     </>
   );
 }
-
-
-
-

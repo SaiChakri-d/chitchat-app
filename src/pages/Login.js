@@ -103,6 +103,7 @@ export default function Login() {
             <img
               style={{
                 height: "8rem",
+                margin: "2rem"
               }}
               src={logo}
               alt="logo"
