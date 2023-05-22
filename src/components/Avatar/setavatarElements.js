@@ -11,13 +11,6 @@ background-color: #131324;
 height: 100vh;
 width: 100vw;
 
-// .loader {
-//   max-inline-size: 100%;
-// }
-// .loading{
-//   color:white;
-//   font-size: large;
-// }
 .title-container {
   h1 {
     color: white;
